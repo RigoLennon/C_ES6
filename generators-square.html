@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Generadores - Cuadrados</title>
+    <script>
+        function* cuadrados(){
+            var n = 1;          //Comienza en 
+            while(true){
+                var c = n * n;  //obtiene el cuadrado
+                n++;            //aumenta para la proxima iteracion
+                yield c;        //devuelve el valor actual
+            }
+        }
+
+        var gen = cuadrados();
+        console.log(gen);       //"suspend"
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
